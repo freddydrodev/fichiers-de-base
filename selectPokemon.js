@@ -8,6 +8,9 @@ const selectPokemon = (id) => {
   // si la donnee est introuvable on stop le code
   if (pokemon === undefined) return;
 
+  // set the general selected to pokemon
+  selectedPokemon = pokemon;
+
   // on recupere chaque champ et template a utiliser
   const nom_en = document.getElementById("nom_en");
   const nom_fr = document.getElementById("nom_fr");

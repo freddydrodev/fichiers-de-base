@@ -25,7 +25,7 @@ const supprimerPokemon = () => {
 
         afficherListePokemons();
       } else {
-        alert("Ce Pokemon n'existe pas ");
+        alert("Ce Pokemon n'existe pas");
       }
     }
   }

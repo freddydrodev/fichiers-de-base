@@ -10,14 +10,14 @@ const modifierPokemon = () => {
   if (nom_en && nom_fr && attaque && defense && type_p) {
     const nom_en_value = nom_en.value.trim();
     const nom_fr_value = nom_fr.value.trim();
-    const attaque_value = attaque.value.trim();
-    const defense_value = defense.value.trim();
+    const attaque_value = parseInt(attaque.value.trim());
+    const defense_value = parseInt(defense.value.trim());
 
     if (
       !!nom_en_value &&
       !!nom_fr_value &&
-      !!attaque_value &&
-      !!defense_value
+      !isNaN(attaque_value) &&
+      !isNaN(defense_value)
     ) {
       const exists = pokemons.find((pok) => pok.name.french === nom_fr_value);
 
@@ -29,6 +29,7 @@ const modifierPokemon = () => {
 
           return {
             ...pok,
+            ...selectedPokemon,
             name: {
               english: nom_en_value,
               french: nom_fr_value,

@@ -19,7 +19,7 @@ const afficherListePokemons = () => {
     pokemonsList.push(
       `
 <li>
-    <button onclick="selectPokemon(${pokemon.id})">
+    <button onclick="selectPokemon(${pokemon.id})" style="width:100%;">
         ${pokemon.name.french}
     </button>
 </li>`
