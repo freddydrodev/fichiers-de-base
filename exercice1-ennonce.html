@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 1</title>
+    <link rel="stylesheet" href="exercice1-ennonce.css" />
+    <script src="exercice1-ennonce.js" type="text/javascript"></script>
+    <script src="afficherListePokemons.js" type="text/javascript"></script>
+    <script src="selectPokemon.js" type="text/javascript"></script>
+    <script src="ajouterPokemon.js" type="text/javascript"></script>
+    <script src="supprimerPokemon.js" type="text/javascript"></script>
+    <script src="modifierPokemon.js" type="text/javascript"></script>
+
+    <template id="temp_type">
+      <p>
+        <label>type</label>
+        <input type="text" />
+      </p>
+    </template>
+  </head>
+  <body>
+    <header>
+      <h1>Pokedex</h1>
+    </header>
+    <main>
+      <div id="container">
+        <div id="index">
+          <h4>Liste des pokemons</h4>
+          <button onclick="afficherListePokemons()">Afficher la liste</button>
+          <ul id="list-pokemons"></ul>
+        </div>
+        <div id="details">
+          <div id="info">
+            <h4>Information</h4>
+            <p>
+              <label for="nom_en">Nom anglais</label>
+              <input type="text" id="nom_en" />
+            </p>
+            <p>
+              <label for="type">Nom français</label>
+              <input type="text" id="nom_fr" />
+            </p>
+            <p>
+              <label for="attaque">Attaque</label>
+              <input type="text" id="attaque" />
+            </p>
+            <p>
+              <label for="defense">Défense</label>
+              <input type="text" id="defense" />
+            </p>
+            <label>Types</label>
+            <p id="type_p"></p>
+          </div>
+          <div id="action">
+            <button onclick="ajouterType()">Ajouter type</button>
+            <button onclick="supprimerType()">Supprimer type</button>
+            <button onclick="ajouterPokemon()">Ajouter</button>
+            <button onclick="supprimerPokemon()">Supprimer</button>
+            <button onclick="modifierPokemon()">Modifier</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+
+<!--
+    Le fichier CSS ne doit pas être modifié
+    Remettre tous les fichiers (HTML, CSS, et JS)
+    cliquer sur ajouter :
+        si le nom francais existe, il affiche un message "Pokemon deja existant", sinon, il ajoute un nouveau pokemon au dictionnaire, met à jour la liste des pokemons
+        l'objet à ajouter peut ne pas contenir uniquement les champs nécessaires
+        Cliquer sur mettre à jour :
+        Si le nom francais n'existe pas, il affiche un message
+    -->

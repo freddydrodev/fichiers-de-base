@@ -1,0 +1,62 @@
+#list-pokemons {
+  list-style-type: none;
+}
+
+#list-pokemons > li {
+  padding: 3px;
+}
+
+#list-pokemons > li > button {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+#container {
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#index {
+  flex: 30%;
+  margin: 0 auto;
+}
+
+#details {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+#info {
+  flex: 1;
+  background-color: azure;
+}
+
+#action {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+button {
+  height: 30px;
+}
