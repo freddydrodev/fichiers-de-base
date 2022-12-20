@@ -41,7 +41,7 @@ const ajouterPokemon = () => {
           },
           // type: ["Grass", "Poison"],
           base: {
-            ...(selectPokemon ?? {}),
+            ...(selectedPokemon ?? {}).base,
             Attack: attaque_value,
             Defense: defense_value,
           },

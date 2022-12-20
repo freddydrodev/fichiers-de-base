@@ -24,6 +24,8 @@ const supprimerPokemon = () => {
         type_p.innerHTML = "";
 
         afficherListePokemons();
+
+        selectedPokemon = null;
       } else {
         alert("Ce Pokemon n'existe pas");
       }

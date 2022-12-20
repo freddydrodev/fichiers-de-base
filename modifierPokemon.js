@@ -36,6 +36,7 @@ const modifierPokemon = () => {
             },
             base: {
               ...pok.base,
+              ...selectedPokemon.base,
               Attack: attaque_value,
               Defense: defense_value,
             },

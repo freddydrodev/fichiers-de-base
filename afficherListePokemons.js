@@ -18,10 +18,8 @@ const afficherListePokemons = () => {
     // selectionner un pokemon grace a son id
     pokemonsList.push(
       `
-<li>
-    <button onclick="selectPokemon(${pokemon.id})" style="width:100%;">
-        ${pokemon.name.french}
-    </button>
+<li onclick="selectPokemon(${pokemon.id})">
+    ${pokemon.name.french}
 </li>`
     );
   });

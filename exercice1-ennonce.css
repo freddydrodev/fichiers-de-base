@@ -6,12 +6,6 @@
   padding: 3px;
 }
 
-#list-pokemons > li > button {
-  padding: 0;
-  border: none;
-  background: transparent;
-}
-
 body {
   display: flex;
   flex-direction: column;

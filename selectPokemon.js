@@ -3,13 +3,13 @@ const selectPokemon = (id) => {
   // recuperer la donnee relative au pokemon
   const pokemon = pokemons.find((pok) => pok.id === id);
 
-  console.log(pokemons);
-
   // si la donnee est introuvable on stop le code
   if (pokemon === undefined) return;
 
   // set the general selected to pokemon
   selectedPokemon = pokemon;
+
+  console.log(selectedPokemon);
 
   // on recupere chaque champ et template a utiliser
   const nom_en = document.getElementById("nom_en");
@@ -27,13 +27,13 @@ const selectPokemon = (id) => {
     attaque.value = pokemon.base.Attack;
     defense.value = pokemon.base.Defense;
 
-    if (pokemon.type) {
+    if (selectedPokemon.type) {
       // LIST POUR AJOUTER LES CLONES
       const list = [];
 
       // naviguer a travers la liste existante de pokemon
       // on va generer les template au fur et a mesure
-      pokemon.type.forEach((value, index) => {
+      selectedPokemon.type.forEach((value, index) => {
         // creation du clone en deep
         const clone = temp.content.cloneNode(true);
 
